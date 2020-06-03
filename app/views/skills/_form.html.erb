@@ -1,0 +1,6 @@
+<div class="jumbotron">
+  <%= form_with model: @skill do |f| %>
+    <%= render 'partials/skill_fields', f: f %>
+    <%= f.submit nil, :class => "btn btn-default" %>
+  <% end %>
+</div>

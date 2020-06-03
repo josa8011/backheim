@@ -1,0 +1,36 @@
+<div class="sidenav" id="sidenav">
+	<%= link_to "Add new", new_polymorphic_url(@items.first.class) %>
+	<%= form_with do |form| %>
+		<%= form.text_field :search, id: :search, placeholder: true, class: "form-control"%>
+		<% for item in @items %>
+			<%= link_to item.caption, edit_polymorphic_path(item) %>
+		<% end %>
+	<% end %>
+</div>
+
+
+
+
+<script>
+	function filterItems() {
+
+		var filterValue = document.getElementById("search").value.toLowerCase();
+		var f = document.getElementById("sidenav");
+		var links = f.getElementsByTagName("a");
+		
+		for (i = 0; i < links.length; i++) {
+			
+			if (links[i].innerHTML.toLowerCase().includes(filterValue)) {
+				links[i].style.display = "";
+			} else {
+				links[i].style.display = "none";
+			}
+		}
+	}
+
+	$(document).ready(function() {
+	    var filterField = document.getElementById("search");
+	    filterField.oninput = filterItems;
+	    filterField.onchange = filterItems;
+	});
+</script>

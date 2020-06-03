@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-12">
+    <%= semantic_form_for @warband do |f| %>
+      <div class="jumbotron">
+        <h3>Basic info</h3>
+        <hr>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <%= f.label :warband_name %>
+            <%= f.text_field :warband_type, class: 'form-control', placeholder: ""  %>
+          </div>
+        </div>
+        
+        <h3>Special skills</h3>
+        <hr style="border-top-color: #d5d5d5">
+        <div class="row">
+          <div class="form-group col-md-12">
+            <div id='special_skills'>
+              <%= f.semantic_fields_for :skills do |special_skill| %>
+                <%= render 'partials/skill_fields', :f => special_skill %>
+              <% end %>
+              <div class='links'>
+                <%= link_to_add_association 'Add special skill', f, :skills, force_non_association_create: true, partial: 'partials/skill_fields' %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <%= f.submit nil, :class => "btn btn-default" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  usable: false
+  charges: 1
+  cost: 1
+  uses_per_game: 1
+
+two:
+  name: MyString
+  usable: false
+  charges: 1
+  cost: 1
+  uses_per_game: 1

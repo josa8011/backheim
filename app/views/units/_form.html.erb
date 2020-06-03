@@ -1,0 +1,169 @@
+<div class="row">
+  <div class="col-md-12">
+    <%= semantic_form_for @unit do |f| %>
+
+      <div class="jumbotron">
+        <h3>Basic info</h3>
+        <hr>
+
+        <div class="row">
+          <div class="form-group col-md-6">
+            <%= f.label :type %>
+            <%= f.text_field :unit_type, class: 'form-control', placeholder: ""  %>
+          </div>
+          <div class="form-group col-md-6">
+            <%= f.label :suggestion %> <i class="fa fa-info-circle" data-toggle="tooltip" title="This is what is shown as a suggestions when adding a new unit in the app. It should only differ from type if there are more than one unit with the same type (e.g. Marksmen exists in several warbands with slightly different rules)"></i>
+            <%= f.text_field :suggestion, class: 'form-control', placeholder: ""  %>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group col-sm-4">
+              <%= f.label :M %>
+              <%= f.text_field :m, class: 'form-control', placeholder: ""  %>
+            </div>
+            <div class="form-group col-sm-4">
+              <%= f.label "WS" %>
+              <%= f.text_field :ws, class: 'form-control', placeholder: ""  %>
+            </div>
+            <div class="form-group col-sm-4">
+              <%= f.label "BS" %>
+              <%= f.text_field :bs, class: 'form-control', placeholder: ""  %>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group col-sm-4">
+              <%= f.label :S %>
+              <%= f.text_field :s, class: 'form-control', placeholder: ""  %>
+            </div>
+            <div class="form-group col-sm-4">
+              <%= f.label :T %>
+              <%= f.text_field :t, class: 'form-control', placeholder: ""  %>
+            </div>
+            <div class="form-group col-sm-4">
+              <%= f.label :W %>
+              <%= f.text_field :w, class: 'form-control', placeholder: ""  %>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group col-sm-4">
+              <%= f.label :I %>
+              <%= f.text_field :i, class: 'form-control', placeholder: ""  %>
+            </div>
+            <div class="form-group col-sm-4">
+              <%= f.label :A %>
+              <%= f.text_field :a, class: 'form-control', placeholder: ""  %>
+            </div>
+            <div class="form-group col-sm-4">
+              <%= f.label :Ld %>
+              <%= f.text_field :ld, class: 'form-control', placeholder: ""  %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-4">
+            <%= f.label "Starting experience" %>
+            <%= f.text_field :exp, class: 'form-control', placeholder: ""  %>
+          </div>
+          <div class="form-group col-md-4">
+            <%= f.label "Rating contribution" %>
+            <%= f.text_field :rating, class: 'form-control', placeholder: ""  %>
+          </div>
+          <div class="form-group col-md-4">
+            <%= f.label :cost %>
+            <%= f.text_field :cost, class: 'form-control', placeholder: ""  %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-4">
+            <%= f.label :race %> <i class="fa fa-info-circle" data-toggle="tooltip" title="This will determine the max profile for the unit. If you enter a race that is previously unknown, you will get to enter the max profile."></i>
+            <%= f.collection_select :race_id, Race.all, :id, :name, {}, {class: 'form-control'} %>
+          </div>
+
+          <div class="form-group col-md-4">
+            <%= f.label :warband %> <i class="fa fa-info-circle" data-toggle="tooltip" title="This will add the correct special skills to the unit. Set to Hired Sword / Dramatis Personae if applicable."></i>
+            <%= f.collection_select :warband_id, Warband.all, :id, :warband_type, {}, {class: 'form-control'}  %>
+          </div>
+        
+          <div class="form-group col-md-4">
+            <%= label_tag :magic_list %>
+            <%= autocomplete_field_tag :magic, @unit.magic_list.nil? ? "" : @unit.magic_list.name, skill_lists_autocomplete_magic_lists_path, class: 'form-control', placeholder: "" %>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="form-group col-md-12">
+            <%= label_tag :skill_lists %>
+            <%= f.input :skill_lists, :as => :check_boxes, collection: SkillList.where(skill_list_type: :base), class: "inline" %>
+          </div>
+        </div>
+        <%= f.submit nil, :class => "btn btn-default" %>
+      </div>
+
+
+      <div class="jumbotron">
+        <h3>Special skills</h3>
+        <hr>
+        <div class="row">
+          <div class="form-group col-md-12">
+            <div id='special_skills'>
+              <%= f.semantic_fields_for :special_skills do |special_skill| %>
+                <%= render 'partials/skill_fields', :f => special_skill %>
+              <% end %>
+              <div class='links'>
+                <%= link_to_add_association 'Add special skill', f, :special_skills, partial: 'partials/skill_fields' %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <%= f.submit nil, :class => "btn btn-default" %>
+      </div>
+
+      <div class="jumbotron">
+        <h3>Special rules</h3>
+        <hr>
+        <div class="row">
+          <div class="form-group col-md-12">
+            <div id='special_rules'>
+              <%= f.semantic_fields_for :special_rules do |special_rule| %>
+                <%= render 'partials/skill_fields', :f => special_rule %>
+              <% end %>
+              <div class='links'>
+                <%= link_to_add_association 'Add special rule', f, :special_rules, partial: 'partials/skill_fields' %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <%= f.submit nil, :class => "btn btn-default" %>
+      </div>
+
+      <div class="jumbotron">
+        <h3>Starting equipment</h3>
+        <hr>
+        <div class="row">
+          <div class="form-group col-md-12">
+            <div id='starting_equipment'>
+              <%= f.semantic_fields_for :starting_equipment do |eq| %>
+                <%= render 'starting_equipment_fields', :f => eq %>
+              <% end %>
+              <div class='links'>
+                <%= link_to_add_association 'Add equipment', f, :starting_equipment %>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <%= f.submit nil, :class => "btn btn-default" %>
+      </div>
+
+    <% end %>
+  </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();   
+    });
+</script>

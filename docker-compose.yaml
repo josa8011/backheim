@@ -1,0 +1,9 @@
+version: '3'
+services:
+  mrdb:
+    build: .
+    image: eu.gcr.io/josa8011/mrdb
+    ports:
+      - "3000:3000"
+    volumes:
+    - ./:/home/mrdb/

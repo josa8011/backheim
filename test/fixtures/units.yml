@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  m: 1
+  ws: 1
+  bs: 1
+  s: 1
+  t: 1
+  w: 1
+  i: 1
+  a: 1
+  ld: 1
+  exp: 1
+  cost: 1
+  race: one
+
+two:
+  name: MyString
+  m: 1
+  ws: 1
+  bs: 1
+  s: 1
+  t: 1
+  w: 1
+  i: 1
+  a: 1
+  ld: 1
+  exp: 1
+  cost: 1
+  race: two

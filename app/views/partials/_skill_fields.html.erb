@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-12">
+
+    <div class="form-group">
+      <%= f.text_field :name, class: 'form-control large-text', placeholder: ""  %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :rules %>
+      <%= f.text_area :description, class: 'form-control', placeholder: ""  %>
+    </div>
+    
+    <%= render 'partials/reminder', f: f %>
+
+    <div class="form-group">
+      <%= f.label :cost %>
+      <%= f.text_field :cost, class: 'form-control', placeholder: ""  %>
+    </div>
+
+    <div class="form-group">
+      <%= f.check_box :usable %>
+      <%= :Usable %>
+    </div>
+    
+    <%= render 'partials/uses_per_game', f: f %>
+
+    <hr style="border-top-color: #d5d5d5">
+
+  </div>
+</div>
