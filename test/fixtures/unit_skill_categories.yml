@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  skill: one
-  skill_list: one
+  unit: one
+  skill_category: one
 
 two:
-  skill: two
-  skill_list: two
+  unit: two
+  skill_category: two

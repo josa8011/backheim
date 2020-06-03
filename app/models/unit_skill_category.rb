@@ -1,4 +1,4 @@
-class UnitSkillList < ApplicationRecord
+class UnitSkillCategory < ApplicationRecord
   belongs_to :unit
   belongs_to :skill_list
   belongs_to :database, optional: true
@@ -7,7 +7,7 @@ class UnitSkillList < ApplicationRecord
 
   def self.default_scope
     unless Database::current_tree.nil?
-      where("unit_skill_lists.database_id IN (" + Database::current_tree.join(",") + ")")
+      where("unit_skill_categories.database_id IN (" + Database::current_tree.join(",") + ")")
     end
   end
 end

@@ -1,0 +1,151 @@
+{
+    specialSkills: [''], // For example, skaven special skills
+    source: 'Town cryer', //tags?
+    broheimGrade: '1a',
+    name: 'Cult of the possessed',
+    heroes: [''], // Array of UID of heroes available for warband
+    henchmen: [''], // Array of uid of henchmen available for warband
+    hiredSwords: [''], // Array of hired sword uuis,
+    dramaticPersonae: [''],
+    maxUnits: 15,
+    description: 'These guys do these things and are from here and there',
+    special: '' // Anonymosity for orcs for example
+
+
+  "heroes": [
+    {
+      "isLarge": "true",
+      "name": "John Doe",
+      "exp": 4, // Gained experience. Doesn't include starting experience
+      "startingExp": 20,// At what experience hero starts
+      "cost": 85, 
+      "type": "Marksman",
+      "fullType": "Marksman (Reiklander)", // Full type Marskmen (reiklander). When typing Suggestion
+      "gainedLevels": 0, // Levels gained in this postgame
+      "rating": 5,
+      "woundsLeft": 2,
+      "ooa": false,
+      "warbandType": "Dwarf Treasure Hunters",
+      "skillCategories": [
+        "Combat",
+        "Shooting",
+        "Strength",
+        "Special"
+      ],
+      "skills": [{ // lets keep skills as is
+          "charges": -1,
+          "cost": 0,
+          "droppable": false,
+          "expires": -1,
+          "name": "Expert Weaponsmith",
+          "reminder": "",
+          "specialCost": "",
+          "usable": false,
+          "usesPerGame": -1
+        }
+      ],
+      "droppedEquipment": [],
+      "equipment": [{ // lets keep equipment mostly as is. Removed type for now.
+        "range": 12, // New field for ranged
+        "charges": -1,
+        "cost": 3,
+        "dropable": false,
+        "expires": -1,
+        "name": "Bow",
+        "reminder": "",
+        "specialCost": "",
+        "usable": false,
+        "usesPerGame": -1
+      }],
+      "i": {
+        "value": 3,
+        "racialMax": 6,
+        "isLeveled": false,
+        "dirty": false
+      },
+      "m": {
+        "racialMax": 4,
+        "value": 4,
+        "isLeveled": false,
+        "dirty": false
+      },
+      "t": {
+        "racialMax": 4,
+        "value": 3,
+        "isLeveled": false,
+        "dirty": false
+      },
+      "s": {
+        "value": 3,
+        "racialMax": 4,
+        "isLeveled": false,
+        "dirty": false
+      },
+      "w": {
+        "racialMax": 3,
+        "value": 1,
+        "isLeveled": false,
+        "dirty": false
+      },
+      "a": {
+        "racialMax": 4,
+        "value": 1,
+        "isLeveled": false,
+        "dirty": false
+      },
+      "ws": {
+        "value": 4,
+        "racialMax": 6,
+        "isLeveled": false,
+        "dirty": false
+      },
+      "ld": {
+        "racialMax": 9,
+        "value": 8,
+        "isLeveled": false,
+        "dirty": false
+      },
+      "bs": {
+        "racialMax": 6,
+        "value": 4,
+        "isLeveled": false,
+        "dirty": false
+      }
+    }
+  ],
+  "henchmen":[{
+    // ... all attributes in same format as hero
+    "numOoa": 0, // Number of out of action
+    "number": 1, // how many hench in the group 
+    "gainedLevels": 0, // Levels gained in this postgame
+    "isLarge": "true",
+    "name": "John Doe",
+    "exp": 4, // Gained experience. Doesn't include starting experience
+    "cost": 85, 
+    "type": "Marksman",
+    "fullType": "Marksman (Reiklander)", // Full type Marskmen (reiklander). When typing Suggestion
+    "rating": 5,
+    "warbandType": "Dwarf Treasure Hunters",
+    "droppedEquipment": [],
+    "equipment": [{ // lets keep equipment mostly as is. Removed type for now.
+      "range": 12, // New field for ranged
+      "charges": -1,
+      "cost": 3,
+      "dropable": false,
+      "expires": -1,
+      "name": "Bow",
+      "reminder": "",
+      "specialCost": "", //  Cost that is rolled with dice 2D6. What is the format?
+      "usable": false,
+      "usesPerGame": -1
+    }]
+  }],
+  "equipment": [],
+  "gamesPlayed": 4,
+  "createdAt": 1590847590384,
+  "shards": 7,
+  "name": "warband name",
+  "goldCrowns": 500,
+  "type": "Cult of the Possessed",
+  "mode": "GAME" // 'GAME' OR 'POST-GAME'
+}

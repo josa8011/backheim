@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'units/autocomplete_warband_warband_type'
   get 'units/autocomplete_race_name'
-  get 'skill_lists/autocomplete_magic_lists'
+  get 'skill_categories/autocomplete_magic_categories'
   get 'equipment/autocomplete_equipment'
 
   root 'start#index'

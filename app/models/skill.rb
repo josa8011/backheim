@@ -1,6 +1,6 @@
 class Skill < ApplicationRecord
-  has_many :skill_skill_lists
-  has_and_belongs_to_many :skill_lists, through: :skill_skill_lists
+  has_many :skill_skill_categories
+  has_and_belongs_to_many :skill_categories, through: :skill_skill_categories
   belongs_to :database
 
   def self.default_scope

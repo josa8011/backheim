@@ -1,8 +1,8 @@
 class Warband < ApplicationRecord
 	belongs_to :database
-	has_one :skill_list
-	has_many :skill_skill_lists, through: :skill_list
-	has_many :skills, through: :skill_skill_lists
+	has_one :skill_category
+	has_many :skill_skill_categories, through: :skill_category
+	has_many :skills, through: :skill_skill_categories
 	
 	accepts_nested_attributes_for :skills
 

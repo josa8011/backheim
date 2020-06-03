@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SkillListTest < ActiveSupport::TestCase
+class UnitSkillCategoryTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

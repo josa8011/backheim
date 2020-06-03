@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MagicListsConnTest < ActiveSupport::TestCase
+class SkillCategoryTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

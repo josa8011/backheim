@@ -1,6 +1,4 @@
-class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
-
+class ApplicationController < ActionController::API
   before_action :show_no_edit_warning!, only: [:index, :new, :edit, :create, :update, :destroy]
   before_action :set_db_tree!, only: [:index, :new, :edit, :create, :update, :destroy]
   before_action :no_edit!, only: [:create, :update, :destroy]
