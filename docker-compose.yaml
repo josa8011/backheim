@@ -1,9 +1,9 @@
 version: '3'
 services:
-  mrdb:
+  backheim:
     build: .
-    image: eu.gcr.io/josa8011/mrdb
+    image: eu.gcr.io/josa8011/backheim
     ports:
       - "3000:3000"
     volumes:
-    - ./:/home/mrdb/
+    - ./:/home/backheim/
