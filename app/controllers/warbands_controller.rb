@@ -5,11 +5,15 @@ class WarbandsController < ApplicationController
   end
 
   def create
+    wbp = warband_params
+    puts "warband_params: #{wbp}"
+    w = Warband.new(wbp)
+    w.save!
   end
 
   private
   def warband_params
-    params.require(:warband).permit(
+    warband_params = params.require(:warband).permit(
       :name, 
       :type,
       :games_played,
@@ -20,10 +24,17 @@ class WarbandsController < ApplicationController
       heroes: unit_permitted_params,
       henchmen: unit_permitted_params,
       hired_swords: unit_permitted_params,
-      dramatis_personae: unit_permitted_params,
+      dramatis_personaes: unit_permitted_params,
       equipment: item_permitted_params
-
     )
+
+    warband_params[:heroes_attributes] = Hero.paramify_json(warband_params.delete :heroes)
+    warband_params[:henchmen_attributes] = Henchman.paramify_json(warband_params.delete :henchmen)
+    warband_params[:hired_swords_attributes] = HiredSword.paramify_json(warband_params.delete :hired_swords)
+    warband_params[:dramatis_personaes_attributes] = DramatisPersonae.paramify_json(warband_params.delete :dramatis_personaes)
+    warband_params[:equipment_attributes] = Equipment.paramify_json(warband_params.delete :equipment)
+
+    warband_params
   end
 
   def unit_permitted_params

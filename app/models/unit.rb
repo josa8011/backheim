@@ -14,4 +14,17 @@ class Unit < ApplicationRecord
   def caption
     suggestion
   end
+
+  def self.paramify_json json
+    json.each_with_index do |_, i|
+      json[i][:skills_attributes] = Skill.paramify_json(json[i].delete :skills)
+      json[i][:equipment_attributes] = Equipment.paramify_json(json[i].delete :equipment)
+      json[i][:dropped_equipment_attributes] = Equipment.paramify_json(json[i].delete :dropped_equipment)
+      json[i][:stats_attributes] = []
+      for stat in [:m, :ws, :bs, :s, :t, :w, :i, :a, :ld]
+        json[i][:stats_attributes].push(Stat.paramify_json(stat, json[i].delete(stat)))
+      end
+    end
+    json
+  end
 end

@@ -8,7 +8,7 @@
     "goldCrowns": 500,
     "mode": "GAME",
     "equipment": [],
-    "dramatisPersonae": [
+    "dramatisPersonaes": [
     ],
     "hiredSwords": [
     ],
@@ -37,7 +37,6 @@
             "charges": -1,
             "cost": 0,
             "droppable": false,
-            "expires": -1,
             "name": "Expert Weaponsmith",
             "reminder": "",
             "specialCost": "",
@@ -52,7 +51,6 @@
             "charges": -1,
             "cost": 3,
             "droppable": false,
-            "expires": -1,
             "name": "Bow",
             "reminder": "",
             "specialCost": "",
@@ -136,14 +134,68 @@
             "charges": -1,
             "cost": 3,
             "droppable": false,
-            "expires": -1,
             "name": "Bow",
             "reminder": "",
             "specialCost": "",
             "usable": false,
             "usesPerGame": -1
           }
-        ]
+        ],
+        "skills": [],       
+        "i": {
+          "value": 3,
+          "racialMax": 6,
+          "isLeveled": false,
+          "isDirty": false
+        },
+        "m": {
+          "racialMax": 4,
+          "value": 4,
+          "isLeveled": false,
+          "isDirty": false
+        },
+        "t": {
+          "racialMax": 4,
+          "value": 3,
+          "isLeveled": false,
+          "isDirty": false
+        },
+        "s": {
+          "value": 3,
+          "racialMax": 4,
+          "isLeveled": false,
+          "isDirty": false
+        },
+        "w": {
+          "racialMax": 3,
+          "value": 1,
+          "isLeveled": false,
+          "isDirty": false
+        },
+        "a": {
+          "racialMax": 4,
+          "value": 1,
+          "isLeveled": false,
+          "isDirty": false
+        },
+        "ws": {
+          "value": 4,
+          "racialMax": 6,
+          "isLeveled": false,
+          "isDirty": false
+        },
+        "ld": {
+          "racialMax": 9,
+          "value": 8,
+          "isLeveled": false,
+          "isDirty": false
+        },
+        "bs": {
+          "racialMax": 6,
+          "value": 4,
+          "isLeveled": false,
+          "isDirty": false
+        }
       }
     ]
   }

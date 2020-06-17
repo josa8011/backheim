@@ -8,7 +8,7 @@
   "goldCrowns": 500,
   "mode": "GAME", // "GAME" OR "POST-GAME"
   "equipment": [],
-  "dramatisPersonae": [""],
+  "dramatisPersonaes": [""],
   "hiredSwords": [""], // Array of hired sword uuis,
   "heroes": [
     {
@@ -36,7 +36,6 @@
           "charges": -1,
           "cost": 0,
           "droppable": false,
-          "expires": -1,
           "name": "Expert Weaponsmith",
           "reminder": "",
           "specialCost": "",
@@ -50,7 +49,6 @@
         "charges": -1,
         "cost": 3,
         "droppable": false,
-        "expires": -1,
         "name": "Bow",
         "reminder": "",
         "specialCost": "",
@@ -133,10 +131,9 @@
       "charges": -1,
       "cost": 3,
       "droppable": false,
-      "expires": -1,
       "name": "Bow",
       "reminder": "",
-      "specialCost": "", //  Cost that is rolled with dice 2D6. What is the format?
+      "specialCost": "", //  Cost that is rolled with dice e.g "D6 * 5"
       "usable": false,
       "usesPerGame": -1
     }]
