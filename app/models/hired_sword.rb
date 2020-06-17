@@ -1,0 +1,2 @@
+class HiredSword < Unit
+end

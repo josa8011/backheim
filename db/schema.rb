@@ -10,16 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190106094555) do
-
-  create_table "item_skill_categories", force: :cascade do |t|
-    t.integer "item_id"
-    t.integer "skill_category_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["item_id"], name: "index_item_skill_categories_on_item_id"
-    t.index ["skill_category_id"], name: "index_item_skill_categories_on_skill_category_id"
-  end
+ActiveRecord::Schema.define(version: 20200615230015) do
 
   create_table "items", force: :cascade do |t|
     t.string "name"
@@ -32,100 +23,48 @@ ActiveRecord::Schema.define(version: 20190106094555) do
     t.string "special_cost"
     t.string "type"
     t.string "class_type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "magic_categories_conns", force: :cascade do |t|
-    t.integer "unit_id"
-    t.integer "skill_category_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["skill_category_id"], name: "index_magic_categories_conns_on_skill_category_id"
-    t.index ["unit_id"], name: "index_magic_categories_conns_on_unit_id"
-  end
-
-  create_table "races", force: :cascade do |t|
-    t.string "name"
-    t.integer "max_m"
-    t.integer "max_ws"
-    t.integer "max_bs"
-    t.integer "max_s"
-    t.integer "max_t"
-    t.integer "max_w"
-    t.integer "max_i"
-    t.integer "max_a"
-    t.integer "max_ld"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "skill_categories", force: :cascade do |t|
-    t.string "name"
-    t.string "type"
     t.integer "warband_id"
+    t.integer "unit_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["warband_id"], name: "index_skill_categories_on_warband_id"
+    t.index ["unit_id"], name: "index_items_on_unit_id"
+    t.index ["warband_id"], name: "index_items_on_warband_id"
   end
 
-  create_table "special_rules_conns", force: :cascade do |t|
+  create_table "stats", force: :cascade do |t|
+    t.string "name"
+    t.integer "racial_max"
+    t.integer "value"
+    t.boolean "is_leveled"
+    t.boolean "is_dirty"
     t.integer "unit_id"
-    t.integer "skill_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["skill_id"], name: "index_special_rules_conns_on_skill_id"
-    t.index ["unit_id"], name: "index_special_rules_conns_on_unit_id"
-  end
-
-  create_table "special_skills_conns", force: :cascade do |t|
-    t.integer "unit_id"
-    t.integer "skill_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["skill_id"], name: "index_special_skills_conns_on_skill_id"
-    t.index ["unit_id"], name: "index_special_skills_conns_on_unit_id"
-  end
-
-  create_table "starting_equipment_conns", force: :cascade do |t|
-    t.integer "unit_id"
-    t.integer "item_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["item_id"], name: "index_starting_equipment_conns_on_item_id"
-    t.index ["unit_id"], name: "index_starting_equipment_conns_on_unit_id"
-  end
-
-  create_table "unit_skill_categories", force: :cascade do |t|
-    t.integer "unit_id"
-    t.integer "skill_category_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["skill_category_id"], name: "index_unit_skill_categories_on_skill_category_id"
-    t.index ["unit_id"], name: "index_unit_skill_categories_on_unit_id"
+    t.index ["unit_id"], name: "index_stats_on_unit_id"
   end
 
   create_table "units", force: :cascade do |t|
     t.string "type"
     t.string "name"
     t.string "suggestion"
+    t.string "warband_type"
     t.integer "exp"
     t.integer "cost"
     t.integer "rating"
-    t.integer "race_id"
-    t.integer "warband_id"
     t.boolean "is_large"
     t.integer "starting_exp"
     t.string "full_type"
     t.integer "gained_levels"
     t.integer "wounds_left"
-    t.boolean "ooa"
-    t.string "class_type"
+    t.integer "num_ooa"
+    t.integer "num_units"
     t.float "rout_test_contribution"
     t.string "warrior_type"
+    t.string "skill_categories"
+    t.string "class_type"
+    t.integer "warband_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["race_id"], name: "index_units_on_race_id"
     t.index ["warband_id"], name: "index_units_on_warband_id"
   end
 
@@ -143,6 +82,16 @@ ActiveRecord::Schema.define(version: 20190106094555) do
 
   create_table "warbands", force: :cascade do |t|
     t.string "type"
+    t.string "name"
+    t.string "special_skill_category"
+    t.string "sources"
+    t.string "broheimGrade"
+    t.integer "max_units"
+    t.string "special_rules"
+    t.integer "games_played"
+    t.integer "shards"
+    t.integer "gold_crowns"
+    t.string "mode"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

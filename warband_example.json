@@ -1,22 +1,21 @@
 {
-    specialSkills: [''], // For example, skaven special skills
-    source: 'Town cryer', //tags?
-    broheimGrade: '1a',
-    name: 'Cult of the possessed',
-    heroes: [''], // Array of UID of heroes available for warband
-    henchmen: [''], // Array of uid of henchmen available for warband
-    hiredSwords: [''], // Array of hired sword uuis,
-    dramaticPersonae: [''],
-    maxUnits: 15,
-    description: 'These guys do these things and are from here and there',
-    special: '' // Anonymosity for orcs for example
-
-
+  "id": 1,
+  "type": "Cult of the Possessed",
+  "name": "warband name",
+  "gamesPlayed": 4,
+  "createdAt": 1590847590384,
+  "shards": 7,
+  "goldCrowns": 500,
+  "mode": "GAME", // "GAME" OR "POST-GAME"
+  "equipment": [],
+  "dramatisPersonae": [""],
+  "hiredSwords": [""], // Array of hired sword uuis,
   "heroes": [
     {
+      "id":2,
       "isLarge": "true",
       "name": "John Doe",
-      "exp": 4, // Gained experience. Doesn't include starting experience
+      "exp": 4, // Gained experience. Doesn"t include starting experience
       "startingExp": 20,// At what experience hero starts
       "cost": 85, 
       "type": "Marksman",
@@ -33,6 +32,7 @@
         "Special"
       ],
       "skills": [{ // lets keep skills as is
+          "id":3,
           "charges": -1,
           "cost": 0,
           "droppable": false,
@@ -49,7 +49,7 @@
         "range": 12, // New field for ranged
         "charges": -1,
         "cost": 3,
-        "dropable": false,
+        "droppable": false,
         "expires": -1,
         "name": "Bow",
         "reminder": "",
@@ -61,66 +61,67 @@
         "value": 3,
         "racialMax": 6,
         "isLeveled": false,
-        "dirty": false
+        "isDirty": false
       },
       "m": {
         "racialMax": 4,
         "value": 4,
         "isLeveled": false,
-        "dirty": false
+        "isDirty": false
       },
       "t": {
         "racialMax": 4,
         "value": 3,
         "isLeveled": false,
-        "dirty": false
+        "isDirty": false
       },
       "s": {
         "value": 3,
         "racialMax": 4,
         "isLeveled": false,
-        "dirty": false
+        "isDirty": false
       },
       "w": {
         "racialMax": 3,
         "value": 1,
         "isLeveled": false,
-        "dirty": false
+        "isDirty": false
       },
       "a": {
         "racialMax": 4,
         "value": 1,
         "isLeveled": false,
-        "dirty": false
+        "isDirty": false
       },
       "ws": {
         "value": 4,
         "racialMax": 6,
         "isLeveled": false,
-        "dirty": false
+        "isDirty": false
       },
       "ld": {
         "racialMax": 9,
         "value": 8,
         "isLeveled": false,
-        "dirty": false
+        "isDirty": false
       },
       "bs": {
         "racialMax": 6,
         "value": 4,
         "isLeveled": false,
-        "dirty": false
+        "isDirty": false
       }
     }
   ],
   "henchmen":[{
+    "id":7,
     // ... all attributes in same format as hero
     "numOoa": 0, // Number of out of action
-    "number": 1, // how many hench in the group 
+    "numUnits": 1, // how many hench in the group 
     "gainedLevels": 0, // Levels gained in this postgame
     "isLarge": "true",
     "name": "John Doe",
-    "exp": 4, // Gained experience. Doesn't include starting experience
+    "exp": 4, // Gained experience. Doesn"t include starting experience
     "cost": 85, 
     "type": "Marksman",
     "fullType": "Marksman (Reiklander)", // Full type Marskmen (reiklander). When typing Suggestion
@@ -131,7 +132,7 @@
       "range": 12, // New field for ranged
       "charges": -1,
       "cost": 3,
-      "dropable": false,
+      "droppable": false,
       "expires": -1,
       "name": "Bow",
       "reminder": "",
@@ -140,12 +141,11 @@
       "usesPerGame": -1
     }]
   }],
-  "equipment": [],
-  "gamesPlayed": 4,
-  "createdAt": 1590847590384,
-  "shards": 7,
-  "name": "warband name",
-  "goldCrowns": 500,
-  "type": "Cult of the Possessed",
-  "mode": "GAME" // 'GAME' OR 'POST-GAME'
+  // Below should probably be in the database rather than for each warband
+  "specialSkillCategory": "Skaven", // Name of a skill category that is unique for this warband
+  "source": ["Town cryer"], // Allow multiple sources
+  "broheimGrade": "1a",
+  "maxUnits": 15,
+  "description": "These guys do these things and are from here and there",
+  "specialRules": "", // Anonymosity for orcs for example
 }

@@ -10,7 +10,11 @@ class CreateItems < ActiveRecord::Migration[5.1]
       t.string :reminder
       t.string :special_cost
       t.string :type
+      t.integer :range
       t.string :class_type
+
+      t.belongs_to :warband
+      t.belongs_to :unit
 
       t.timestamps
     end

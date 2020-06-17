@@ -1,0 +1,3 @@
+class Henchman < Unit
+end
+  

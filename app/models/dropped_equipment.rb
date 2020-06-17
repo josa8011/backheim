@@ -1,0 +1,2 @@
+class DroppedEquipment < Item
+end
