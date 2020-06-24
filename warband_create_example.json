@@ -58,60 +58,71 @@
             "usesPerGame": -1
           }
         ],
-        "i": {
-          "value": 3,
-          "racialMax": 6,
-          "isLeveled": false,
-          "isDirty": false
-        },
-        "m": {
-          "racialMax": 4,
-          "value": 4,
-          "isLeveled": false,
-          "isDirty": false
-        },
-        "t": {
-          "racialMax": 4,
-          "value": 3,
-          "isLeveled": false,
-          "isDirty": false
-        },
-        "s": {
-          "value": 3,
-          "racialMax": 4,
-          "isLeveled": false,
-          "isDirty": false
-        },
-        "w": {
-          "racialMax": 3,
-          "value": 1,
-          "isLeveled": false,
-          "isDirty": false
-        },
-        "a": {
-          "racialMax": 4,
-          "value": 1,
-          "isLeveled": false,
-          "isDirty": false
-        },
-        "ws": {
-          "value": 4,
-          "racialMax": 6,
-          "isLeveled": false,
-          "isDirty": false
-        },
-        "ld": {
-          "racialMax": 9,
-          "value": 8,
-          "isLeveled": false,
-          "isDirty": false
-        },
-        "bs": {
-          "racialMax": 6,
-          "value": 4,
-          "isLeveled": false,
-          "isDirty": false
-        }
+        "stats": [
+          {
+            "name": "i",
+            "value": 3,
+            "racialMax": 6,
+            "isLeveled": false,
+            "isDirty": false
+          },
+          {
+            "name": "m",
+            "racialMax": 4,
+            "value": 4,
+            "isLeveled": false,
+            "isDirty": false
+          },
+          {
+            "name": "t",
+            "racialMax": 4,
+            "value": 3,
+            "isLeveled": false,
+            "isDirty": false
+          },
+          {
+            "name": "s",
+            "value": 3,
+            "racialMax": 4,
+            "isLeveled": false,
+            "isDirty": false
+          },
+          {
+            "name": "w",
+            "racialMax": 3,
+            "value": 1,
+            "isLeveled": false,
+            "isDirty": false
+          },
+          {
+            "name": "a",
+            "racialMax": 4,
+            "value": 1,
+            "isLeveled": false,
+            "isDirty": false
+          },
+          {
+            "name": "ws",
+            "value": 4,
+            "racialMax": 6,
+            "isLeveled": false,
+            "isDirty": false
+          },
+          {
+            "name": "ld",
+            "racialMax": 9,
+            "value": 8,
+            "isLeveled": false,
+            "isDirty": false
+          },
+          {
+            "name": "bs",
+            "racialMax": 6,
+            "value": 4,
+            "isLeveled": false,
+            "isDirty": false
+          }
+        ]
       }
     ],
     "henchmen": [
@@ -141,61 +152,72 @@
             "usesPerGame": -1
           }
         ],
-        "skills": [],       
-        "i": {
-          "value": 3,
-          "racialMax": 6,
-          "isLeveled": false,
-          "isDirty": false
-        },
-        "m": {
-          "racialMax": 4,
-          "value": 4,
-          "isLeveled": false,
-          "isDirty": false
-        },
-        "t": {
-          "racialMax": 4,
-          "value": 3,
-          "isLeveled": false,
-          "isDirty": false
-        },
-        "s": {
-          "value": 3,
-          "racialMax": 4,
-          "isLeveled": false,
-          "isDirty": false
-        },
-        "w": {
-          "racialMax": 3,
-          "value": 1,
-          "isLeveled": false,
-          "isDirty": false
-        },
-        "a": {
-          "racialMax": 4,
-          "value": 1,
-          "isLeveled": false,
-          "isDirty": false
-        },
-        "ws": {
-          "value": 4,
-          "racialMax": 6,
-          "isLeveled": false,
-          "isDirty": false
-        },
-        "ld": {
-          "racialMax": 9,
-          "value": 8,
-          "isLeveled": false,
-          "isDirty": false
-        },
-        "bs": {
-          "racialMax": 6,
-          "value": 4,
-          "isLeveled": false,
-          "isDirty": false
-        }
+        "skills": [],
+        "stats": [  
+          {
+            "name": "i",
+            "value": 3,
+            "racialMax": 6,
+            "isLeveled": false,
+            "isDirty": false
+          },
+          {
+            "name": "m",
+            "racialMax": 4,
+            "value": 4,
+            "isLeveled": false,
+            "isDirty": false
+          },
+          {
+            "name": "t",
+            "racialMax": 4,
+            "value": 3,
+            "isLeveled": false,
+            "isDirty": false
+          },
+          {
+            "name": "s",
+            "value": 3,
+            "racialMax": 4,
+            "isLeveled": false,
+            "isDirty": false
+          },
+          {
+            "name": "w",
+            "racialMax": 3,
+            "value": 1,
+            "isLeveled": false,
+            "isDirty": false
+          },
+          {
+            "name": "a",
+            "racialMax": 4,
+            "value": 1,
+            "isLeveled": false,
+            "isDirty": false
+          },
+          {
+            "name": "ws",
+            "value": 4,
+            "racialMax": 6,
+            "isLeveled": false,
+            "isDirty": false
+          },
+          {
+            "name": "ld",
+            "racialMax": 9,
+            "value": 8,
+            "isLeveled": false,
+            "isDirty": false
+          },
+          {
+            "name": "bs",
+            "racialMax": 6,
+            "value": 4,
+            "isLeveled": false,
+            "isDirty": false
+          }
+        ]
       }
     ]
   }

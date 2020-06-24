@@ -3,21 +3,25 @@
   "type": "Cult of the Possessed",
   "name": "warband name",
   "gamesPlayed": 4,
-  "createdAt": 1590847590384,
+  "createdAt": 1590847590384, // This will be filled automatically. Do we still need this?
   "shards": 7,
   "goldCrowns": 500,
   "mode": "GAME", // "GAME" OR "POST-GAME"
   "equipment": [],
-  "dramatisPersonaes": [""],
-  "hiredSwords": [""], // Array of hired sword uuis,
+  "dramatisPersonaes": [
+    ""
+  ],
+  "hiredSwords": [
+    ""
+  ], // Array of hired sword uuis,
   "heroes": [
     {
-      "id":2,
+      "id": 2,
       "isLarge": "true",
       "name": "John Doe",
       "exp": 4, // Gained experience. Doesn"t include starting experience
-      "startingExp": 20,// At what experience hero starts
-      "cost": 85, 
+      "startingExp": 20, // At what experience hero starts
+      "cost": 85,
       "type": "Marksman",
       "fullType": "Marksman (Reiklander)", // Full type Marskmen (reiklander). When typing Suggestion
       "gainedLevels": 0, // Levels gained in this postgame
@@ -31,8 +35,9 @@
         "Strength",
         "Special"
       ],
-      "skills": [{ // lets keep skills as is
-          "id":3,
+      "skills": [
+        { // lets keep skills as is
+          "id": 3,
           "charges": -1,
           "cost": 0,
           "droppable": false,
@@ -44,103 +49,122 @@
         }
       ],
       "droppedEquipment": [],
-      "equipment": [{ // lets keep equipment mostly as is. Removed type for now.
-        "range": 12, // New field for ranged
-        "charges": -1,
-        "cost": 3,
-        "droppable": false,
-        "name": "Bow",
-        "reminder": "",
-        "specialCost": "",
-        "usable": false,
-        "usesPerGame": -1
-      }],
-      "i": {
-        "value": 3,
-        "racialMax": 6,
-        "isLeveled": false,
-        "isDirty": false
-      },
-      "m": {
-        "racialMax": 4,
-        "value": 4,
-        "isLeveled": false,
-        "isDirty": false
-      },
-      "t": {
-        "racialMax": 4,
-        "value": 3,
-        "isLeveled": false,
-        "isDirty": false
-      },
-      "s": {
-        "value": 3,
-        "racialMax": 4,
-        "isLeveled": false,
-        "isDirty": false
-      },
-      "w": {
-        "racialMax": 3,
-        "value": 1,
-        "isLeveled": false,
-        "isDirty": false
-      },
-      "a": {
-        "racialMax": 4,
-        "value": 1,
-        "isLeveled": false,
-        "isDirty": false
-      },
-      "ws": {
-        "value": 4,
-        "racialMax": 6,
-        "isLeveled": false,
-        "isDirty": false
-      },
-      "ld": {
-        "racialMax": 9,
-        "value": 8,
-        "isLeveled": false,
-        "isDirty": false
-      },
-      "bs": {
-        "racialMax": 6,
-        "value": 4,
-        "isLeveled": false,
-        "isDirty": false
-      }
+      "equipment": [
+        { // lets keep equipment mostly as is. Removed type for now.
+          "range": 12, // New field for ranged
+          "charges": -1,
+          "cost": 3,
+          "droppable": false,
+          "name": "Bow",
+          "reminder": "",
+          "specialCost": "",
+          "usable": false,
+          "usesPerGame": -1
+        }
+      ],
+      "stats": [
+        {
+          "name": "i",
+          "value": 3,
+          "racialMax": 6,
+          "isLeveled": false,
+          "isDirty": false
+        },
+        {
+          "name": "m",
+          "racialMax": 4,
+          "value": 4,
+          "isLeveled": false,
+          "isDirty": false
+        },
+        {
+          "name": "t",
+          "racialMax": 4,
+          "value": 3,
+          "isLeveled": false,
+          "isDirty": false
+        },
+        {
+          "name": "s",
+          "value": 3,
+          "racialMax": 4,
+          "isLeveled": false,
+          "isDirty": false
+        },
+        {
+          "name": "w",
+          "racialMax": 3,
+          "value": 1,
+          "isLeveled": false,
+          "isDirty": false
+        },
+        {
+          "name": "a",
+          "racialMax": 4,
+          "value": 1,
+          "isLeveled": false,
+          "isDirty": false
+        },
+        {
+          "name": "ws",
+          "value": 4,
+          "racialMax": 6,
+          "isLeveled": false,
+          "isDirty": false
+        },
+        {
+          "name": "ld",
+          "racialMax": 9,
+          "value": 8,
+          "isLeveled": false,
+          "isDirty": false
+        },
+        {
+          "name": "bs",
+          "racialMax": 6,
+          "value": 4,
+          "isLeveled": false,
+          "isDirty": false
+        }
+      ]
     }
   ],
-  "henchmen":[{
-    "id":7,
-    // ... all attributes in same format as hero
-    "numOoa": 0, // Number of out of action
-    "numUnits": 1, // how many hench in the group 
-    "gainedLevels": 0, // Levels gained in this postgame
-    "isLarge": "true",
-    "name": "John Doe",
-    "exp": 4, // Gained experience. Doesn"t include starting experience
-    "cost": 85, 
-    "type": "Marksman",
-    "fullType": "Marksman (Reiklander)", // Full type Marskmen (reiklander). When typing Suggestion
-    "rating": 5,
-    "warbandType": "Dwarf Treasure Hunters",
-    "droppedEquipment": [],
-    "equipment": [{ // lets keep equipment mostly as is. Removed type for now.
-      "range": 12, // New field for ranged
-      "charges": -1,
-      "cost": 3,
-      "droppable": false,
-      "name": "Bow",
-      "reminder": "",
-      "specialCost": "", //  Cost that is rolled with dice e.g "D6 * 5"
-      "usable": false,
-      "usesPerGame": -1
-    }]
-  }],
+  "henchmen": [
+    {
+      "id": 7,
+      // ... all attributes in same format as hero
+      "numOoa": 0, // Number of out of action
+      "numUnits": 1, // how many hench in the group 
+      "gainedLevels": 0, // Levels gained in this postgame
+      "isLarge": "true",
+      "name": "John Doe",
+      "exp": 4, // Gained experience. Doesn"t include starting experience
+      "cost": 85,
+      "type": "Marksman",
+      "fullType": "Marksman (Reiklander)", // Full type Marskmen (reiklander). When typing Suggestion
+      "rating": 5,
+      "warbandType": "Dwarf Treasure Hunters",
+      "droppedEquipment": [],
+      "equipment": [
+        { // lets keep equipment mostly as is. Removed type for now.
+          "range": 12, // New field for ranged
+          "charges": -1,
+          "cost": 3,
+          "droppable": false,
+          "name": "Bow",
+          "reminder": "",
+          "specialCost": "", //  Cost that is rolled with dice e.g "D6 * 5"
+          "usable": false,
+          "usesPerGame": -1
+        }
+      ]
+    }
+  ],
   // Below should probably be in the database rather than for each warband
   "specialSkillCategory": "Skaven", // Name of a skill category that is unique for this warband
-  "source": ["Town cryer"], // Allow multiple sources
+  "source": [
+    "Town cryer"
+  ], // Allow multiple sources
   "broheimGrade": "1a",
   "maxUnits": 15,
   "description": "These guys do these things and are from here and there",

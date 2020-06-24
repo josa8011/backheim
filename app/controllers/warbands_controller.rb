@@ -1,14 +1,19 @@
 class WarbandsController < ApplicationController
   def index
-    warband = Warband.first
-    render json: warband
+    render(json: Warband.all, include: { 
+        heroes: unit_json_include,
+        henchmen: unit_json_include,
+        hired_swords: unit_json_include,
+        dramatis_personaes: unit_json_include,
+        equipment: {except: default_exclude}
+      }
+    )
   end
 
   def create
-    wbp = warband_params
-    puts "warband_params: #{wbp}"
-    w = Warband.new(wbp)
+    w = Warband.new(warband_params)
     w.save!
+    render json: w
   end
 
   private
@@ -54,15 +59,7 @@ class WarbandsController < ApplicationController
       :num_ooa,
       :warband_type,
       skill_categories: [],
-      i: stats_permitted_params,
-      m: stats_permitted_params,
-      t: stats_permitted_params,
-      s: stats_permitted_params,
-      w: stats_permitted_params,
-      a: stats_permitted_params,
-      ws: stats_permitted_params,
-      ld: stats_permitted_params,
-      bs: stats_permitted_params,
+      stats: stats_permitted_params,
       skills: item_permitted_params,
       dropped_equipment: item_permitted_params,
       equipment: item_permitted_params
@@ -86,10 +83,26 @@ class WarbandsController < ApplicationController
 
   def stats_permitted_params
     [
+      :name,
       :racial_max,
       :value,
       :is_leveled,
       :is_dirty
     ]
+  end
+
+  def unit_json_include
+    {
+      include: {
+        stats: {except: default_exclude},
+        skills: {except: default_exclude},
+        equipment: {except: default_exclude},
+        dropped_equipment: {except: default_exclude}
+      }
+    }
+  end
+
+  def default_exclude
+    [:created_at, :updated_at, :unit_id, :warband_id]
   end
 end

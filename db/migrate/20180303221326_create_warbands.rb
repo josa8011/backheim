@@ -3,7 +3,6 @@ class CreateWarbands < ActiveRecord::Migration[5.1]
     create_table :warbands do |t|
       t.string :type
       t.string :name
-      t.string :special_rules, array: true
       t.integer :games_played
       t.integer :shards
       t.integer :gold_crowns

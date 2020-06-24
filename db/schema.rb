@@ -85,7 +85,6 @@ ActiveRecord::Schema.define(version: 20200615230015) do
   create_table "warbands", force: :cascade do |t|
     t.string "type"
     t.string "name"
-    t.string "special_rules"
     t.integer "games_played"
     t.integer "shards"
     t.integer "gold_crowns"

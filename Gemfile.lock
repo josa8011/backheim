@@ -66,8 +66,6 @@ GEM
     hirb (0.7.3)
     i18n (1.8.3)
       concurrent-ruby (~> 1.0)
-    jbuilder (2.10.0)
-      activesupport (>= 5.0.0)
     loofah (2.6.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -77,9 +75,15 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.1)
+    multi_json (1.14.1)
     nio4r (2.5.2)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
+    oj (3.10.6)
+    olive_branch (3.0.0)
+      multi_json
+      oj
+      rails (>= 4.0)
     orm_adapter (0.5.0)
     public_suffix (4.0.5)
     rack (2.2.3)
@@ -144,7 +148,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   devise
   hirb
-  jbuilder (~> 2.5)
+  olive_branch
   rails (~> 5.1.4)
   selenium-webdriver
   sqlite3
